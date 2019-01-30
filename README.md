@@ -1,4 +1,4 @@
-# SMARTER-A
+# SMARTER-ANDROID
 
 Netbean and Android Studio are the IDEs used
 
