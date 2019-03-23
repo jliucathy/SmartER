@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SMARTER</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="noofresident_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="energyprovider_array">
+        <item>ERO</item>
+        <item>LO</item>
+    </string-array>
+
+    <string-array name="choice">
+        <item>Hourly</item>
+        <item>Daily</item>
+    </string-array>
+
+</resources>
