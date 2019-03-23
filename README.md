@@ -1,1 +1,0 @@
-# SMARTER2
