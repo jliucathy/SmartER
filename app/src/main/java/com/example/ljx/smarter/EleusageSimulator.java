@@ -21,7 +21,7 @@ public class EleusageSimulator {
     public static int counter=0;
     public static int flag=0;
     private int timeRecord;
-    private int times;
+    private static int times;
     private String usageid;
     private Resident resid;
     private String date;
@@ -183,9 +183,11 @@ public class EleusageSimulator {
         return counter;
     }
 
-    public static int getflag(){
+    public static int getFlag(){
         return flag;
     }
+
+    public static int getTimes(){return times;}
 }
 
 
