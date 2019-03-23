@@ -94,7 +94,7 @@ public class EleusageFacadeREST extends AbstractFacade<Eleusage> {
     @Path("findByDate/{date}")
     @Produces({"application/json"})
     public List<Eleusage> findByDate(@PathParam("date") String datestr) throws Exception{
-        List<Electricity> result = new ArrayList<Electricity>();
+        List<Eleusage> result = new ArrayList<Eleusage>();
         try {
             Date date=new SimpleDateFormat("yyyy-mm-dd").parse(datestr);   
             Query query=em.createNamedQuery("Eleusage.findByDate");        
@@ -287,7 +287,7 @@ public class EleusageFacadeREST extends AbstractFacade<Eleusage> {
     {
         List<Eleusage> results = new ArrayList<Eleusage>();
         try {
-            Query query = em.createNamedQuery("Electricity.findByDateTime");
+            Query query = em.createNamedQuery("Eleusage.findByDateTime");
             Date date = new SimpleDateFormat("yyyy-mm-dd").parse(datestr);
             query.setParameter("date", date);
             query.setParameter("time", time);

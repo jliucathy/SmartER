@@ -40,7 +40,7 @@ import java.text.DecimalFormat;
     , @NamedQuery(name = "Eleusage.findByAircon", query = "SELECT e FROM Eleusage e WHERE e.aircon = :aircon")
     , @NamedQuery(name = "Eleusage.findByWashingmachine", query = "SELECT e FROM Eleusage e WHERE e.washingmachine = :washingmachine")
     , @NamedQuery(name = "Eleusage.findByTemperature", query = "SELECT e FROM Eleusage e WHERE e.temperature = :temperature")
-    , @NamedQuery(name = "Electricity.findByDateTime", query = "SELECT e FROM Electricity e WHERE e.date = :date AND e.time = :time")
+    , @NamedQuery(name = "Eleusage.findByDateTime", query = "SELECT e FROM Eleusage e WHERE e.date = :date AND e.time = :time")
     , @NamedQuery(name = "Eleusage.findByResidDate", query = "SELECT e FROM Eleusage e WHERE e.resid.resid = :resid AND e.date = :date")
     , @NamedQuery(name = "Eleusage.findByEmailANDTime", query = "SELECT e FROM Eleusage e WHERE UPPER(e.resid.email) = UPPER(:email) AND e.time=:time")})
 public class Eleusage implements Serializable {
