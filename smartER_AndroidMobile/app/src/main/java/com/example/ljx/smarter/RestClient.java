@@ -19,7 +19,7 @@ import java.io.PrintWriter;
 public class RestClient {
     //private static ERDBManager erdbManager;
 
-    private static final String BASE_URI="http://118.139.29.33:8080/smartER/webresources";
+    private static final String BASE_URI="http://118.139.29.33:8080";
     //http://118.139.26.111
     public static String retrieveData(final String methodPath){
         URL url=null;
@@ -48,66 +48,66 @@ public class RestClient {
         return textResult;
     }
     public static String findAllUser(){
-        final String methodPath="/restvicres.resident/";
+        final String methodPath="/api/findAllResident";
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
     public static String findEptPasswd(String username){
-        final String methodPath="/restvicres.credential/findByUsername/"+username;
+        final String methodPath="/api/findByUsername/"+username;
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
 
     public static String findAllCredential(){
-        final String methodPath="/restvicres.credential/";
+        final String methodPath="/api/findAllCredential";
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
     public static String findAllUsage(){
-        final String methodPath="/restvicres.eleusage/";
+        final String methodPath="/api/findAllUsage";
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
 
     public static String findresident(String resid){
-        final String methodPath="/restvicres.resident/"+resid;
+        final String methodPath="/api/findResident/"+resid;
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
     public static String finddailyUsage(String resid, String datestr){
         //if datestr match re
-        final String methodPath="/restvicres.eleusage/finddailyorhourly/"+resid+"/"+datestr+"/daily";
+        final String methodPath="/api/finddailyorhourly/"+resid+"/"+datestr+"/daily";
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
     public static String finddetailedDailyUsage(String resid, String datestr){
         //if datestr match re
-        final String methodPath="/restvicres.eleusage/finddailyorhourly/"+resid+"/"+datestr+"/hourly";
+        final String methodPath="/api/finddailyorhourly/"+resid+"/"+datestr+"/hourly";
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
     public static String findhourlyUsage(String resid, String datestr,String hour){
         //if datestr match re
-        final String methodPath="/restvicres.eleusage/findbyIDANDDateANDtime/"+resid+"/"+datestr+"/"+hour;
+        final String methodPath="/api/findbyIDANDDateANDtime/"+resid+"/"+datestr+"/"+hour;
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
     public static String finddailyAppliance(String resid, String datestr){
-        final String methodPath="/restvicres.eleusage/finddailyappliance/"+resid+"/"+datestr;
+        final String methodPath="/api/finddailyappliance/"+resid+"/"+datestr;
         String textResult=retrieveData(methodPath);
         return textResult;
     }
 
     public static String findAllhourlyUsage(String date, String time){
-        final String methodPath="/restvicres.eleusage/findbyDateANDtime/"+date+"/"+time;
+        final String methodPath="/api/findbyDateANDtime/"+date+"/"+time;
         String textResult=retrieveData(methodPath);
         return textResult;
     }
@@ -142,7 +142,7 @@ public class RestClient {
 
     public static void createResident(Resident resident){
         // erdbManager.insertUsage();
-        final String methodPath="/restvicres.resident/";
+        final String methodPath="/api/createResident";
         Gson gson = new Gson();
         String stringUsageJson = gson.toJson(resident);
         postData(methodPath,stringUsageJson);
@@ -150,7 +150,7 @@ public class RestClient {
 
     public static void createCredential(Credential credential){
         // erdbManager.insertUsage();
-        final String methodPath="/restvicres.credential/";
+        final String methodPath="/api/createCredential";
         Gson gson = new Gson();
         String stringUsageJson = gson.toJson(credential);
         postData(methodPath,stringUsageJson);
@@ -158,10 +158,9 @@ public class RestClient {
 
     public static void createEleusage(EleusageSimulator eleusage){
         // erdbManager.insertUsage();
-        final String methodPath="/restvicres.eleusage/";
+        final String methodPath="/api/createEleusage";
         Gson gson = new Gson();
         String stringUsageJson = gson.toJson(eleusage);
         postData(methodPath,stringUsageJson);
     }
 }
-
