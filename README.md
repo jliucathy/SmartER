@@ -1,5 +1,3 @@
-# SMARTER-ANDROID
+# SMARTER
 
-Netbean and Android Studio are the IDEs used
-
-Glassfish 4.1 is used as server
+Eclipse and Android Studio are the IDEs used
