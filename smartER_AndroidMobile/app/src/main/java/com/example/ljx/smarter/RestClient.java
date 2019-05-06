@@ -19,7 +19,7 @@ import java.io.PrintWriter;
 public class RestClient {
     //private static ERDBManager erdbManager;
 
-    private static final String BASE_URI="http://118.139.29.33:8080";
+    private static final String BASE_URI="http://118.139.29.33:5003";
     //http://118.139.26.111
     public static String retrieveData(final String methodPath){
         URL url=null;
